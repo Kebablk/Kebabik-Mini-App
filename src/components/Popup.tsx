@@ -14,8 +14,8 @@ export default function Popup() {
   if (!showPopup) return null;
 
   return (
-    <div className="w-full h-full bg-[#131215] flex justify-center items-center">
-      <h1>Wassup!</h1>
+    <div className="w-full h-dvh bg-[#131215] flex justify-center items-center">
+      <h1 className="text-white text-6xl font-semibold">Wassup!</h1>
     </div>
   );
 }
