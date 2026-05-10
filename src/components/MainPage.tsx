@@ -7,7 +7,7 @@ export default function MainPage() {
       <Image
         src={img}
         alt="logo"
-        className="w-[35%] h-[40%] rounded-[50%] shadow-gray-400 shadow-2xs"
+        className="w-12.5 h-12.5 rounded-[50%] shadow-gray-400 shadow-2xs"
       />
     </div>
   );
