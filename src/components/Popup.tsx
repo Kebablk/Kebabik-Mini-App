@@ -29,9 +29,13 @@ export default function Popup() {
 
   if (!showPopup) return null;
 
+  const theme = window.Telegram?.WebApp?.themeParams;
+  const bgColor = theme?.bg_color || "#0b0b0b";
+
   return (
     <div
-      className={`w-full h-dvh bg-[#131313] flex justify-center items-center transition-all duration-1000 z-50 absolute ${!isVisible ? "opacity-0" : "opacity-100"}`}
+      style={{ backgroundColor: bgColor }}
+      className={`w-full h-dvh flex justify-center items-center transition-all duration-1000 z-50 absolute ${!isVisible ? "opacity-0" : "opacity-100"}`}
     >
       <h1
         className={`text-white text-[45px] font-semibold transition-all duration-1000 opacity-0 ${isVisibleText && "opacity-100"}`}
