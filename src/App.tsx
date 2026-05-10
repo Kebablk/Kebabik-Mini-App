@@ -1,3 +1,4 @@
+import MainPage from "./components/MainPage";
 import Popup from "./components/Popup";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Popup />
+      <MainPage />
     </>
   );
 }

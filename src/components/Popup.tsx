@@ -12,7 +12,6 @@ export default function Popup() {
 
     const hideTimer = setTimeout(() => {
       setIsVisible(false);
-      setIsVisibleText(false);
     }, 3000);
 
     const popupTimer = setTimeout(() => {
@@ -32,10 +31,10 @@ export default function Popup() {
 
   return (
     <div
-      className={`w-full h-dvh bg-[#131215] flex justify-center items-center transition-all duration-1000 z-50 ${!isVisible ? "opacity-0" : "opacity-100"}`}
+      className={`w-full h-dvh bg-[#23282b] flex justify-center items-center transition-all duration-1000 z-50 absolute ${!isVisible ? "opacity-0" : "opacity-100"}`}
     >
       <h1
-        className={`text-white text-[50px] font-semibold transition-all duration-1000 ${isVisibleText ? "opacity-100" : "opacity-0"}`}
+        className={`text-white text-[45px] font-semibold transition-all duration-1000 opacity-0 ${isVisibleText && "opacity-100"}`}
       >
         Wassup!
       </h1>
