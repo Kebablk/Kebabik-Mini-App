@@ -11,10 +11,10 @@ export default function Popup() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (showPopup) return null;
+  if (!showPopup) return null;
 
   return (
-    <div className="w-full h-full bg-[#0d031b] flex justify-center items-center">
+    <div className="w-full h-full bg-[#131215] flex justify-center items-center">
       <h1>Wassup!</h1>
     </div>
   );
