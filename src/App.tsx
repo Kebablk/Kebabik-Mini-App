@@ -1,21 +1,34 @@
+import { useState } from "react";
 import MainPage from "./components/MainPage";
 import Popup from "./components/Popup";
+import AboutPage from "./components/AboutPage";
 
 function App() {
-  // const user = window.Telegram?.WebApp?.initDataUnsafe?.user;
-  // const theme = window.Telegram?.WebApp?.themeParams;
+  const [currentPage, setCurrentPage] = useState("main");
 
-  // const bgColor = theme?.bg_color || "#0a0a0a";
-  // const textColor = theme?.text_color || "ffffff";
-  // const buttonColor = theme?.button_color || "#3b82f6";
-  // const linkColor = theme?.link_color || "06b6d4";
-  // const hintColor = theme?.hint_color || "6b7280";
-  return (
-    <>
-      <Popup />
-      <MainPage />
-    </>
-  );
+  const navigateTo = (page: string) => {
+    setCurrentPage(page);
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "main":
+        return (
+          <>
+            <Popup />
+            <MainPage navigateTo={navigateTo} />
+          </>
+        );
+      case "about":
+        return <AboutPage navigateTo={navigateTo} />;
+      // case "settings":
+      //   return <SettingsPage navigateTo={navigateTo} />;
+      // default:
+      //   return <HomePage navigateTo={navigateTo} />;
+    }
+  };
+
+  return <>{renderPage()}</>;
 }
 
 export default App;

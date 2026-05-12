@@ -2,9 +2,20 @@ import img from "../img/kebab-portfolio.png";
 import Button from "./Button";
 import Divider from "./Divider";
 
-export default function MainPage() {
+interface IMainPageProps {
+  navigateTo?: (page: string) => void;
+}
+
+export default function MainPage({ navigateTo }: IMainPageProps) {
   const theme = window.Telegram?.WebApp?.themeParams;
   const bgColor = theme?.bg_color || "#0b0b0b";
+
+  const btnsValue = [
+    { value: "Обо мне", navigate: "about" },
+    { value: "Мой проект", navigate: "my-project" },
+    { value: "Услуги", navigate: "services" },
+    { value: "Отзывы", navigate: "reviews" },
+  ];
 
   return (
     <div
@@ -22,10 +33,16 @@ export default function MainPage() {
       </h3>
       <Divider />
       <div className="w-full h-[40%] flex flex-col justify-center items-center gap-2">
-        <Button value="Обо мне" />
-        <Button value="Мой проект" />
-        <Button value="Услуги" />
-        <Button value="Отзывы" />
+        {navigateTo &&
+          btnsValue.map((e) => (
+            <Button
+              value={e.value}
+              onClick={() => {
+                navigateTo(e.navigate);
+                console.log(e.navigate);
+              }}
+            />
+          ))}
       </div>
     </div>
   );
