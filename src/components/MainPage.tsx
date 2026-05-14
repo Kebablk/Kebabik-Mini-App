@@ -20,7 +20,7 @@ export default function MainPage({ navigateTo }: IMainPageProps) {
   return (
     <div
       style={{ backgroundColor: bgColor }}
-      className="w-full h-dvh relative flex flex-col justify-start items-center pt-5!"
+      className="w-full h-full relative flex flex-col justify-start items-center pt-5!"
     >
       <img
         src={img}
@@ -41,6 +41,8 @@ export default function MainPage({ navigateTo }: IMainPageProps) {
                 navigateTo(e.navigate);
                 console.log(e.navigate);
               }}
+              className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl"
+              textClassName="text-white text-3xl font-semibold"
             />
           ))}
       </div>
