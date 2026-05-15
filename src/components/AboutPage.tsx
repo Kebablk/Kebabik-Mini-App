@@ -35,6 +35,11 @@ export default function AboutPage({ navigateTo }: IAboutPageProps) {
     },
   ];
 
+  const btnValues = [
+    { value: "Мой стек", navigate: "stack" },
+    { value: "Вернуться в меню", navigate: "main" },
+  ];
+
   return (
     <div
       style={{ backgroundColor: bgColor }}
@@ -57,14 +62,15 @@ export default function AboutPage({ navigateTo }: IAboutPageProps) {
         ))}
       </div>
 
-      {navigateTo && (
-        <Button
-          className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-gray-500/25 text-center mt-3"
-          textClassName="text-white text-[20px] font-semibold"
-          value="Вернуться в меню"
-          onClick={() => navigateTo("main")}
-        />
-      )}
+      {navigateTo &&
+        btnValues.map((obj) => (
+          <Button
+            className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-gray-500/25 text-center mt-4"
+            textClassName="text-white text-[22px] font-semibold"
+            value={obj.value}
+            onClick={() => navigateTo(obj.navigate)}
+          />
+        ))}
     </div>
   );
 }
