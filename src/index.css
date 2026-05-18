@@ -74,3 +74,17 @@
 body {
   background-color: var(--tg-theme-bg-color, #0b0b0b);
 }
+
+@utility bounce-once {
+  animation: bounceOnce 0.5s ease-in-out 1;
+}
+
+@keyframes bounceOnce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
