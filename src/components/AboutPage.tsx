@@ -51,7 +51,7 @@ export default function AboutPage({ navigateTo }: IAboutPageProps) {
         className="w-30 h-30 rounded-full shadow-[0_0_35px_rgba(255,255,255,0.3)] mb-1.5 object-cover object-bottom"
       />
       <h2 className="text-white text-[24px]">Роман</h2>
-      <h3 className="text-gray-500 text-[18px] mb-2.5">AKA Kebabik</h3>
+      <h3 className="text-gray-500 text-[18px]">AKA Kebabik</h3>
       <Divider />
       <h2 className="text-3xl text-center bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-bold">
         FULLSTACK-разработчик

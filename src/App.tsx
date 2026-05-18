@@ -2,6 +2,7 @@ import { useState } from "react";
 import MainPage from "./components/MainPage";
 import Popup from "./components/Popup";
 import AboutPage from "./components/AboutPage";
+import StackPage from "./components/StackPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
@@ -21,6 +22,8 @@ function App() {
         );
       case "about":
         return <AboutPage navigateTo={navigateTo} />;
+      case "stack":
+        return <StackPage navigateTo={navigateTo} />;
       // case "settings":
       //   return <SettingsPage navigateTo={navigateTo} />;
       // default:

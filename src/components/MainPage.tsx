@@ -14,6 +14,7 @@ export default function MainPage({ navigateTo }: IMainPageProps) {
     { value: "Обо мне", navigate: "about" },
     { value: "Мой проект", navigate: "my-project" },
     { value: "Услуги", navigate: "services" },
+    { value: "Кейсы", navigate: "cases" },
     { value: "Отзывы", navigate: "reviews" },
   ];
 
@@ -28,9 +29,7 @@ export default function MainPage({ navigateTo }: IMainPageProps) {
         className="w-22.5 h-22.5 rounded-full shadow-[0_0_35px_rgba(255,255,255,0.3)] mb-1.5"
       />
       <h2 className="text-white text-[24px]">Kebabik</h2>
-      <h3 className="text-gray-500 text-[18px] mb-4.5">
-        Fullstack-разработчик
-      </h3>
+      <h3 className="text-gray-500 text-[18px]">Fullstack-разработчик</h3>
       <Divider />
       <div className="w-full h-[40%] flex flex-col justify-center items-center gap-2">
         {navigateTo &&
@@ -39,7 +38,6 @@ export default function MainPage({ navigateTo }: IMainPageProps) {
               value={e.value}
               onClick={() => {
                 navigateTo(e.navigate);
-                console.log(e.navigate);
               }}
               className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl"
               textClassName="text-white text-3xl font-semibold"
