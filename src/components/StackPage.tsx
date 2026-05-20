@@ -56,9 +56,9 @@ export default function StackPage({ navigateTo }: IStackPageProps) {
   return (
     <div
       style={{ backgroundColor: bgColor }}
-      className="w-full h-full relative flex flex-col justify-start items-center pt-5!"
+      className="w-full h-full absolute flex flex-col justify-start items-center pt-5!"
     >
-      <h2 className="text-[32px] font-semibold text-white">Мой стэк</h2>
+      <h2 className="text-[32px] font-semibold text-white">Мой стек</h2>
       <Divider />
       <div className="w-[80%] h-full flex flex-col justify-center items-center gap-2">
         <div className="w-full h-full flex flex-col justify-start items-center gap-1">

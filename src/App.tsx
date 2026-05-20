@@ -3,6 +3,7 @@ import MainPage from "./components/MainPage";
 import Popup from "./components/Popup";
 import AboutPage from "./components/AboutPage";
 import StackPage from "./components/StackPage";
+import LoadingPage from "./components/LoadingPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
@@ -21,9 +22,19 @@ function App() {
           </>
         );
       case "about":
-        return <AboutPage navigateTo={navigateTo} />;
+        return (
+          <>
+            <LoadingPage title="ОБО МНЕ" />
+            <AboutPage navigateTo={navigateTo} />
+          </>
+        );
       case "stack":
-        return <StackPage navigateTo={navigateTo} />;
+        return (
+          <>
+            <LoadingPage title="МОЙ СТЕК" />
+            <StackPage navigateTo={navigateTo} />
+          </>
+        );
       // case "settings":
       //   return <SettingsPage navigateTo={navigateTo} />;
       // default:

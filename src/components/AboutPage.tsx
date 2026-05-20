@@ -43,7 +43,7 @@ export default function AboutPage({ navigateTo }: IAboutPageProps) {
   return (
     <div
       style={{ backgroundColor: bgColor }}
-      className="w-full h-full relative flex flex-col justify-start items-center pt-5!"
+      className="w-full h-full absolute flex flex-col justify-start items-center pt-5!"
     >
       <img
         src={img}

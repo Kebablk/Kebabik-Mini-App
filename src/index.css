@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @font-face {
   font-family: "Montserrat Alternates";
@@ -76,7 +77,7 @@ body {
 }
 
 @utility bounce-once {
-  animation: bounceOnce 0.5s ease-in-out 1;
+  animation: bounceOnce 0.75s ease-in-out 1;
 }
 
 @keyframes bounceOnce {
@@ -85,6 +86,24 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-40px);
+    transform: translateY(-20px);
+  }
+}
+
+@utility smooth-bg-fading {
+  animation: smoothFading 1.5s ease-in-out 1 forwards;
+}
+
+@utility smooth-fading {
+  animation: smoothFading 1.25s ease-in-out 1 forwards;
+}
+
+@keyframes smoothFading {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
