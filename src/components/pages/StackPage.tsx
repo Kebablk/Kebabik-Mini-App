@@ -1,19 +1,19 @@
-import reactLogo from "../img/react.png";
-import tsLogo from "../img/typescript.png";
-import viteLogo from "../img/vite.png";
-import tailwindLogo from "../img/tailwind.svg";
-import mobxlogo from "../img/mobx.svg";
-import axiosLogo from "../img/axios.png";
-import gitLogo from "../img/git.png";
-import nestLogo from "../img/nest.png";
-import nodeLogo from "../img/node.webp";
-import expressLogo from "../img/express.png";
-import prismaLogo from "../img/prisma.png";
-import postgresqlLogo from "../img/postgresql.png";
-import redisLogo from "../img/redis.png";
-import dockerLogo from "../img/docker.svg";
-import Divider from "./Divider";
-import Button from "./Button";
+import reactLogo from "src/img/react.png";
+import tsLogo from "src/img/typescript.png";
+import viteLogo from "src/img/vite.png";
+import tailwindLogo from "src/img/tailwind.svg";
+import mobxlogo from "src/img/mobx.svg";
+import axiosLogo from "src/img/axios.png";
+import gitLogo from "src/img/git.png";
+import nestLogo from "src/img/nest.png";
+import nodeLogo from "src/img/node.webp";
+import expressLogo from "src/img/express.png";
+import prismaLogo from "src/img/prisma.png";
+import postgresqlLogo from "src/img/postgresql.png";
+import redisLogo from "src/img/redis.png";
+import dockerLogo from "src/img/docker.svg";
+import Divider from "../Divider";
+import Button from "../Button";
 
 interface IStackPageProps {
   navigateTo?: (page: string) => void;
@@ -59,7 +59,9 @@ export default function StackPage({ navigateTo }: IStackPageProps) {
       className="w-full h-full absolute flex flex-col justify-start items-center pt-5!"
     >
       <h2 className="text-[32px] font-semibold text-white">Мой стек</h2>
-      <Divider />
+      <div className="relative w-full h-auto flex justify-center items-center">
+        <Divider />
+      </div>
       <div className="w-[80%] h-full flex flex-col justify-center items-center gap-2">
         <div className="w-full h-full flex flex-col justify-start items-center gap-1">
           <h3 className="text-[25px] font-medium text-white">Frontend</h3>
@@ -102,7 +104,7 @@ export default function StackPage({ navigateTo }: IStackPageProps) {
       </div>
       {navigateTo && (
         <Button
-          className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-gray-500/25 text-center mt-4"
+          className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-linear-to-br from-gray-700 to-gray-900 text-center mt-4"
           textClassName="text-white text-[22px] font-semibold"
           value="Вернуться в меню"
           onClick={() => navigateTo("main")}

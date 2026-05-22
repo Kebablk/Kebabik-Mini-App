@@ -1,10 +1,10 @@
-import img from "../img/my-photo.jpg";
-import AboutBlock from "./AboutBlock";
-import Button from "./Button";
-import Divider from "./Divider";
-import experience from "../img/experience.png";
-import project from "../img/project.png";
-import quality from "../img/quality.png";
+import img from "src/img/my-photo.jpg";
+import AboutBlock from "../AboutBlock";
+import Button from "../Button";
+import Divider from "../Divider";
+import experience from "src/img/experience.png";
+import project from "src/img/project.png";
+import quality from "src/img/quality.png";
 
 interface IAboutPageProps {
   navigateTo?: (page: string) => void;
@@ -52,7 +52,9 @@ export default function AboutPage({ navigateTo }: IAboutPageProps) {
       />
       <h2 className="text-white text-[24px]">Роман</h2>
       <h3 className="text-gray-500 text-[18px]">AKA Kebabik</h3>
-      <Divider />
+      <div className="relative w-full h-auto flex justify-center items-center">
+        <Divider />
+      </div>
       <h2 className="text-3xl text-center bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-bold">
         FULLSTACK-разработчик
       </h2>
@@ -65,7 +67,7 @@ export default function AboutPage({ navigateTo }: IAboutPageProps) {
       {navigateTo &&
         btnValues.map((obj) => (
           <Button
-            className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-gray-500/25 text-center mt-4"
+            className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-linear-to-br from-gray-700 to-gray-900 text-center mt-4"
             textClassName="text-white text-[22px] font-semibold"
             value={obj.value}
             onClick={() => navigateTo(obj.navigate)}

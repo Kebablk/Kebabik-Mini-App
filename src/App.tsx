@@ -1,9 +1,10 @@
 import { useState } from "react";
-import MainPage from "./components/MainPage";
+import MainPage from "./components/pages/MainPage";
 import Popup from "./components/Popup";
-import AboutPage from "./components/AboutPage";
-import StackPage from "./components/StackPage";
-import LoadingPage from "./components/LoadingPage";
+import AboutPage from "./components/pages/AboutPage";
+import StackPage from "./components/pages/StackPage";
+import LoadingPage from "./components/pages/LoadingPage";
+import ProjectPage from "./components/pages/ProjectPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
@@ -35,10 +36,13 @@ function App() {
             <StackPage navigateTo={navigateTo} />
           </>
         );
-      // case "settings":
-      //   return <SettingsPage navigateTo={navigateTo} />;
-      // default:
-      //   return <HomePage navigateTo={navigateTo} />;
+      case "my-project":
+        return (
+          <>
+            <LoadingPage title="МОЙ ПРОЕКТ" />
+            <ProjectPage navigateTo={navigateTo} />
+          </>
+        );
     }
   };
 

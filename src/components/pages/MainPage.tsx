@@ -1,6 +1,6 @@
-import img from "../img/kebab-portfolio.png";
-import Button from "./Button";
-import Divider from "./Divider";
+import img from "src/img/kebab-portfolio.png";
+import Button from "../Button";
+import Divider from "../Divider";
 
 interface IMainPageProps {
   navigateTo?: (page: string) => void;

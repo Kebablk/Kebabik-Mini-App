@@ -94,10 +94,6 @@ body {
   animation: smoothFading 1.5s ease-in-out 1 forwards;
 }
 
-@utility smooth-fading {
-  animation: smoothFading 1.25s ease-in-out 1 forwards;
-}
-
 @keyframes smoothFading {
   0%,
   75% {
@@ -105,5 +101,19 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@utility object-smooth-fading {
+  animation: objectSmoothFading 1s ease-in-out 1 forwards;
+}
+
+@keyframes objectSmoothFading {
+  0% {
+    opacity: 0;
+  }
+  60%,
+  100% {
+    opacity: 1;
   }
 }
