@@ -1,10 +1,10 @@
-import img from "src/img/my-photo.jpg";
+import img from "../../img/my-photo.jpg";
 import AboutBlock from "../AboutBlock";
 import Button from "../Button";
 import Divider from "../Divider";
-import experience from "src/img/experience.png";
-import project from "src/img/project.png";
-import quality from "src/img/quality.png";
+import experience from "../../img/experience.png";
+import project from "../../img/project.png";
+import quality from "../../img/quality.png";
 
 interface IAboutPageProps {
   navigateTo?: (page: string) => void;

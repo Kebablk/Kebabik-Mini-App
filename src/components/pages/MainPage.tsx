@@ -1,4 +1,4 @@
-import img from "src/img/kebab-portfolio.png";
+import img from "../../img/kebab-portfolio.png";
 import Button from "../Button";
 import Divider from "../Divider";
 

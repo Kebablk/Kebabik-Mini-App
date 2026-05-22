@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 interface ButtonProps {
-  value: any;
+  value?: string;
   onClick: () => void;
   className: string;
   textClassName: string;
+  children?: React.ReactNode;
 }
 
 export default function Button({
@@ -12,6 +13,7 @@ export default function Button({
   onClick,
   className,
   textClassName,
+  children,
 }: ButtonProps) {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
@@ -30,7 +32,13 @@ export default function Button({
       <div
         className={`w-4 h-4 rounded-full bg-white transition-all duration-400 shadow-[0_0_35px_rgba(255,255,255,0.3)] ${isHovered ? "opacity-100" : "opacity-0"}`}
       ></div>
-      <h3 className={textClassName}>{value}</h3>
+
+      {children ? (
+        <span className={textClassName}>{children}</span>
+      ) : (
+        <h3 className={textClassName}>{value}</h3>
+      )}
+
       <div
         className={`w-4 h-4 rounded-full bg-white transition-all duration-400 shadow-[0_0_35px_rgba(255,255,255,0.3)] ${isHovered ? "opacity-100" : "opacity-0"}`}
       ></div>
