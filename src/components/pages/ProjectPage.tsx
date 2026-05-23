@@ -5,6 +5,7 @@ import createImg from "../../img/create.png";
 import publicateImg from "../../img/publication.png";
 import developmentImg from "../../img/development.png";
 import telegramImg from "../../img/telegram.png";
+import Link from "../Link";
 
 interface IProjectPageProps {
   navigateTo?: (page: string) => void;
@@ -115,19 +116,21 @@ export default function ProjectPage({ navigateTo }: IProjectPageProps) {
           </div>
         </div>
       </div>
-      <Button
-        className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-linear-to-br from-gray-700 to-gray-900 text-center mt-4"
-        textClassName="text-white text-[22px] font-semibold flex justify-center items-center"
-        onClick={() => {}}
+      {/* <a
+        className="w-[90%] h-auto flex justify-center items-center gap-1.5 p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-linear-to-br from-gray-700 to-gray-900 mt-4"
+        href="https://t.me/kebabikORL"
       >
-        <span>Больше о проекте</span>
-        <img
-          src={telegramImg}
-          width="30px"
-          height="30px"
-          className="ml-1.5"
-        ></img>
-      </Button>
+        <span className="text-center text-white text-[22px] font-semibold">
+          Больше о проекте
+        </span>
+        <img src={telegramImg} width="30px" height="30px"></img>
+      </a> */}
+      <Link href="https://t.me/kebabikORL">
+        <span className="text-center text-white text-[22px] font-semibold">
+          Больше о проекте
+        </span>
+        <img src={telegramImg} width="30px" height="30px"></img>
+      </Link>
       {navigateTo && (
         <Button
           className="w-[90%] h-auto flex justify-between items-center p-2! transition-all duration-400 cursor-pointer rounded-3xl bg-linear-to-br from-gray-700 to-gray-900 text-center mt-4"

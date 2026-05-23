@@ -5,6 +5,7 @@ import AboutPage from "./components/pages/AboutPage";
 import StackPage from "./components/pages/StackPage";
 import LoadingPage from "./components/pages/LoadingPage";
 import ProjectPage from "./components/pages/ProjectPage";
+import ServicesPage from "./components/pages/ServicesPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
@@ -41,6 +42,13 @@ function App() {
           <>
             <LoadingPage title="МОЙ ПРОЕКТ" />
             <ProjectPage navigateTo={navigateTo} />
+          </>
+        );
+      case "services":
+        return (
+          <>
+            <LoadingPage title="УСЛУГИ" />
+            <ServicesPage navigateTo={navigateTo} />
           </>
         );
     }
