@@ -1,6 +1,7 @@
 import Divider from "../Divider";
 import Service from "../Service";
 import website from "../../img/website.png";
+import bot from "../../img/bot.png";
 import Button from "../Button";
 
 interface IServicesPageProps {
@@ -32,6 +33,20 @@ export default function ServicesPage({ navigateTo }: IServicesPageProps) {
           "Быстрая загрузка",
         ]}
         price="от 10 000"
+        deadline="от 1 дня"
+      />
+      <Service
+        src={bot}
+        title="Telegram/VK bots"
+        descr="Разработка бота для любых задач: от простого FAQ до полноценного приёма платежей и записи клиентов."
+        arr={[
+          "Работа 24/7",
+          "Обработка заказов и оплат прямо в диалоге",
+          "Экономия времени",
+          "Готовая админ-панель",
+          "Сборка данных в удобную таблицу",
+        ]}
+        price="от 6 000"
         deadline="от 1 дня"
       />
       {navigateTo && (
